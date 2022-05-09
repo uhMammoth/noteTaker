@@ -49,6 +49,10 @@ const deleteNote = (id) =>
     headers: {
       'Content-Type': 'application/json',
     },
+  })
+  .then(() => {
+    getAndRenderNotes();
+    renderActiveNote();
   });
 
 const renderActiveNote = () => {
@@ -68,9 +72,6 @@ const renderActiveNote = () => {
 };
 
 const handleNoteSave = () => {
-  if (activeNote.id) {
-    
-  }
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,

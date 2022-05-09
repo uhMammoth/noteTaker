@@ -19,6 +19,13 @@ router.post('/notes', (req, res) => {
     res.json(note);
 });
 
+router.delete('/notes/:id', (req, res) => {
+    const {id} = req.params;
+    const noteNum = notes.findIndex(n => n.id === id);
+    notes.splice(noteNum, 1);
+    res.send('DELETE request recieved');
+});
+
 
 
 //GET /api/notes should read the db json file and return all saved notes as json
