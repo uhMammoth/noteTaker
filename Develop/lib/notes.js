@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { v4: uuidv4 } = require('uuid');
 
 function addNote(body, notes){
     const note = body;
@@ -11,7 +12,13 @@ function addNote(body, notes){
     return note;
 }
 
+function idGen(){
+    let id = uuidv4();
+    return id;
+}
+
 module.exports = {
     addNote,
+    idGen,
 
   };
