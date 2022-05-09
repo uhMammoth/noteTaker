@@ -1,4 +1,5 @@
 # noteTaker
+Using express and UUID to run a server and create unique ID's for objects respectively. Also deploying on heroku
 ## User Story
 AS A small business owner
 I WANT to be able to write and save notes
